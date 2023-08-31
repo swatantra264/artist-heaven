@@ -1,0 +1,34 @@
+<%- include('../includes/header.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (errorMessage.length > 0) { %>
+            <div class="user-message user-message--error">
+                <%= errorMessage %>
+            </div>
+            <% } %>
+            <% if (success.length > 0) { %>
+                <div class="user-message user-message--success">
+                    <%= success %>
+                </div>
+                <% } %>
+                <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Brilliant Brushes</h1>
+                <p class="lead">Find yourself amidst the light of beautiful colors...</p>
+                <hr class="my-4">
+                <p class="lead">For all the artists and art lovers out there <i class="fa fa-paint-brush"></i></p>
+                <hr>
+                <p class="lead">Register yourself to upload art and connect with other artists..</p><a href="/signup" class="forget"> Register Now!</a>
+                <hr>
+                <div>
+                  <a class="btn btn-primary btn-lg" href="/products" role="button">Explore</a>
+                </div>
+              </div>
+            </div>
+    </main>
+<%- include('../includes/footer.ejs') %>

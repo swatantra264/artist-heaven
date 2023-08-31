@@ -1,0 +1,18 @@
+<%- include('../includes/header.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main class="centered">
+    <h1 class="display-4"><%= product.title %></h1>
+    <hr>
+    <div class="image-details"><img src="/<%= product.imageUrl %>" alt="<%= product.title %>" class="image-details-img" /></div>
+    <hr>
+    <h2 class="lead">₹<%= product.price%></h2>
+    <p class="lead"><%= product.description %></p>
+    <% if(isAuthenticated) { %>
+        <p class="lead">Contact the artist via:-<%= email %></p>
+        <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+        <% } %>
+    </main>
+<%- include('../includes/footer.ejs') %>
